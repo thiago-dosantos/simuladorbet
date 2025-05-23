@@ -224,6 +224,7 @@ header {
 .bet-buttons {
     display: flex;
     justify-content: space-between;
+    padding: 5px;
 }
 
 .bet-button {
@@ -719,49 +720,63 @@ header {
     background-color: #c82333;
 }
 
+/* Estilo base do botão de adicionar fundos */
 .add-funds-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* Impede que o texto quebre */
 }
 
+/* Efeito hover */
 .add-funds-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
-    background-color: #ff5252;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  background-color: #ff5252;
 }
 
+/* Ícone do botão */
 .add-funds-button::before {
-    content: "+";
-    margin-right: 5px;
-    font-size: 16px;
+  content: "+";
+  margin-right: 5px;
+  font-size: 16px;
 }
 
-/* Responsive Adjustments */
+/* Ajustes para mobile */
 @media (max-width: 480px) {
-    .funds-options {
-        grid-template-columns: 1fr;
+  .add-funds-button {
+    padding: 10px 16px; /* Reduz um pouco o padding */
+    font-size: 13px; /* Tamanho de fonte menor */
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  /* Versão ainda mais compacta para telas muito pequenas */
+  @media (max-width: 360px) {
+    .add-funds-button {
+      padding: 8px 12px;
+      font-size: 12px;
     }
     
-    .add-funds-button {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
+    .add-funds-button::before {
+      margin-right: 3px;
+      font-size: 14px;
     }
+  }
 }
 
 #total-goals {
