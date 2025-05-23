@@ -607,7 +607,7 @@ header {
 /* Responsive Styles */
 @media (max-width: 480px) {
     .logo-container h1 {
-        font-size: 20px;
+        font-size: 2rem;
     }
     
     .balance-container {
